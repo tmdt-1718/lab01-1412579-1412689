@@ -1580,15 +1580,14 @@ a.b-home:hover{
 	color:#26313b;
 	font-size: 1.4em;
 	padding-bottom: 15px;
-	margin: 0;
 	font-weight: 700;
-	
+	text-align: center;
 }
 .register-top-grid div, .register-bottom-grid div {
-	width: 48%;
-	float: left;
-	margin: 10px 0;
+	width: 50%;
+	margin: 0 auto;
 }
+
 .register-top-grid span, .register-bottom-grid span {
 	color:#999;
 	font-size: 0.85em;
@@ -2188,7 +2187,8 @@ h3.m_3 {
 .register-top-grid div, .register-bottom-grid div {
   width: 100%;
   float: none;
-  margin: 10px 0;
+  display: block;
+  margin: 0 auto;
 }
 div.register-bottom-grid {
   margin-top: 5em;
@@ -2436,4 +2436,9 @@ a.b-home {
 
 .left{
   float: left;
+}
+
+.btn-submit{
+  display: block;
+  margin: 0 auto;
 }
