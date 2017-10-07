@@ -16,6 +16,7 @@ class UserController < ApplicationController
             end
         end
     end
+    private
     def session_params
 		params.require(:user).permit(:username,:fullname,:email,:password,:password_confirmation)
 	end

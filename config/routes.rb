@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   
   get '/signup', to: 'user#new', as: :signup
   post '/signup', to: 'user#create', as: nil
+  #, :path_names => {:new => 'new' }
+  resources :post, only: [:index, :new, :edit, :update, :create, :show] 
 
   #resources :user, only: [:new,:create], path: '/', path_names: { new: 'signup', create: 'signup'} 
 end

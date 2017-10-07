@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-    #before_action :isLogin
+    before_action :getPostIndex, only: [:index]
     def index
-        @posts = Post.joins(:user).select("posts.*","users.fullname")
+        p @posts
     end
 end

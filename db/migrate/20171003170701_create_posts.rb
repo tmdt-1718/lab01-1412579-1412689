@@ -6,7 +6,7 @@ class CreatePosts < ActiveRecord::Migration[5.1]
       t.text :content
       t.text :thumbnail
       t.bigserial :user_id
-      t.bigint :view
+      t.bigint :view, default: 0
 
       t.timestamps
     end

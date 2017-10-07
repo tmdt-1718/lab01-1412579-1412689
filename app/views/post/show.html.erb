@@ -1,0 +1,53 @@
+<%= render "shared/header" %>
+<!-- content -->
+<div class="container">
+<div class="content-top">
+	<%= render "shared/leftbar" %>
+			<div class="single">
+				<div class="single-top">
+					
+					<div class="thread-cover-container">
+						<img src="<%=@post.thumbnail%>" class="img-responsive" alt="">
+						<div class="bg">
+							<h1 class="title"><%=@post.title%></h1>
+						</div>
+						
+					</div>
+					<p class="sin"><%=@post.content%></p>
+					
+						<div class="artical-links">
+		  						 	<ul>
+		  						 		<li><small> </small><span><%= @post.created_at.strftime("%d/%m/%Y") %></span></li>
+		  						 		<li><a href="#"><small class="admin"> </small><span><%= @user.fullname %> </span></a></li>
+		  						 		<li><a href="#"><small class="no"> </small><span>0 bình luận</span></a></li>
+		  						 		<li><a href="#"><small class="link"> </small><span>Lượt xem: <%= @post.view %> </span></a></li>
+		  						 	</ul>
+		  						 </div>
+						<div class="respon">
+							<h2>Danh sách bình luận</h2>
+							<div class="strator">
+								<h5>ADMINISTRATOR</h5>
+								<p>feb 20th, 2015 at 9:41 pm</p>
+									<div class="strator-right">
+										<p class="sin">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tinci arted.
+											Ut wisi enim ad minim veniam, quis nostrud exerci 	</p>
+									</div>
+								<div class="clearfix"></div>
+							</div>
+							<div class="comment">
+								<h2>Bình luận</h2>
+								<form method="post" action="">
+								 <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
+								 <div class="smt1">
+									<input type="submit" value="Bình luận">
+								 </div>
+							   </form>
+							</div>
+						</div>
+				</div>
+			
+				<div class="clearfix"> </div>
+			</div>
+</div>
+<!-- content -->
+<%= render "shared/footer" %>
