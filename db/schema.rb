@@ -23,8 +23,8 @@ ActiveRecord::Schema.define(version: 20171003175801) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.bigserial "idpost", null: false
-    t.bigserial "iduser", null: false
+    t.bigint "post_id", default: -> { "nextval('comments_idpost_seq'::regclass)" }, null: false
+    t.bigint "user_id", default: -> { "nextval('comments_iduser_seq'::regclass)" }, null: false
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20171003175801) do
     t.text "slug"
     t.text "content"
     t.text "thumbnail"
-    t.bigserial "iduser", null: false
-    t.bigint "view"
+    t.bigint "user_id", default: -> { "nextval('posts_iduser_seq'::regclass)" }, null: false
+    t.bigint "view", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
