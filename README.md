@@ -6,7 +6,10 @@ Thành viên:
 * [ ] **1412579** Vũ Minh Trí (1412579)
 * [ ] **1412689** Hoàng Thị Bích Vân (1412689)
 
-URL: **URL hosting của bài tập**
+URL: **https://lab01-1412579-1412689.herokuapp.com/**
+Account test: tangliang/123456
+
+**Database được upload tại folder Database**
 
 ## Yêu cầu
 
