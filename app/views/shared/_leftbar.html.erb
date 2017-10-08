@@ -1,0 +1,33 @@
+<div class="col-md-3 bann-left active" id="left">
+<div class="b-search">
+    <form>
+        <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+        <input type="submit" value="">
+    </form>
+</div>
+<h3>Bài viết nhiều người xem</h3>
+<div class="blo-top">
+<% @viewpost.each do |post| %>
+    <div class="blog-grids">
+        <div class="blog-grid-left">
+            <a href="/post/<%=post.slug%>"><img src="<%= post.thumbnail %>" class="img-responsive" alt=""></a>
+        </div>
+        <div class="blog-grid-right">
+            <h4><%= link_to post.title, post_path(post.slug) %></h4>
+            <p><%= truncate(post.content, :length => 20) %>	</p>
+            <p>View: <%= post.view %> </p>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <% end %>
+</div>
+<h3>Thành viên mới</h3>
+<div class="blo-top">
+<% @usernew.each do |us| %>
+    <li> 
+        <p>Thành viên mới:    <b><%=us.fullname%></b> </p>
+        <p>Thời gian đăng ký: <%= us.created_at.strftime("%d/%m/%Y") %></p>
+    </li>
+<%end%>
+</div>
+</div>

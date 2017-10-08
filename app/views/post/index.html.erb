@@ -1,0 +1,45 @@
+<%= render "shared/header" %>
+    <div class="container">
+        <%= render "shared/left-dashboard" %>
+            <div class="col-md-9">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:">Quản lý bài viết</a></li>
+                    <li class="breadcrumb-item"><a href="/post/list">Danh sách bài viết</a></li>		
+                </ol>
+                <h2>Danh sách bài viết</h2>
+                <% if flash[:success] %>
+                <div class="alert alert-success">
+                    <%= flash[:success] %>
+                </div>
+                <% end %>
+                <table id="myTable" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>ID bài viết</th>
+                            <th>Tiêu đề</th>
+                            <th>Nội dung</th>
+                            <th>Thumbnail</th>
+                            <th>Người viết</th>
+                            <th>View</th>
+                            <th>Ngày tạo</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @posts.each do |post| %>
+                        <tr>
+                            <td><%= post.id %></td>
+                            <td><%= post.title %></td>
+                            <td><%= truncate(post.content, :length => 20) %></td>
+                            <td><img src="<%= post.thumbnail %>" width="50px" height="auto" class="img-responsive" alt=""></td>
+                            <td><%= post.fullname %>  </td>
+                            <td><%= post.view %></td>
+                            <td><%= post.created_at.strftime("%d/%m/%Y") %></td>
+                            <td><%= link_to "Sửa bài viết", edit_post_path(post.id) %></td>
+                        </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+    <%= render "shared/footer" %>
