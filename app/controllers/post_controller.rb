@@ -49,7 +49,7 @@ class PostController < ApplicationController
         if @post
             @user = User.find(@post.user_id)
             @post.increment!(:view)
-            @comments = Comment.joins(:user).where(comments: { user_id:  session[:current_user]["id"]}, comments: { post_id:  @post.id}).select("comments.*","users.fullname")
+            @comments = Comment.joins(:user).where(comments: { post_id:  @post.id}).select("comments.*","users.fullname")
             puts @comments
         end
     end
