@@ -37,6 +37,7 @@
 								<div class="clearfix"></div>
 							</div>
 							<%end%>
+							<% if session[:current_user] %>
 							<div class="comment">
 								<h2>Bình luận</h2>
 								<%= form_with scope: :comment,url: comment_post_path do |f| %>
@@ -44,6 +45,11 @@
 								<input type="submit" class="btn btn-primary" id="post" name="btnLogin" value="Bình luận">
 								 <%end%>
 							</div>
+							<%else%>
+							<div class="comment"></div>
+								<a href="/login">Hãy đăng nhập để bình luận</a>
+							</div>
+							<%end%>
 						</div>
 				</div>
 			
