@@ -17,9 +17,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
+  host: <%= Figaro.env.host %>
+  database: <%= Figaro.env.database %>
   username: <%= Figaro.env.username %>
   password: <%= Figaro.env.password %>
-  host: localhost
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -83,5 +84,8 @@ test:
 #
 production:
   <<: *default
+  
+  host: <%= Figaro.env.host %>
+  database: <%= Figaro.env.database %>
   username: <%= Figaro.env.username %>
   password: <%= Figaro.env.password %>
