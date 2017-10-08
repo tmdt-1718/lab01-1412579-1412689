@@ -1,10 +1,12 @@
 
+
 <%= render "shared/header" %>
 <div class="container">
 <%= render "shared/leftbar" %>
+
 	<div class="col-md-9 bann-right" id="right">
 		<!-- banner -->
-		<div class="banner">		
+		<div class="banner">
 			<div class="header-slider">
 				<div class="slider">
 					<div class="callbacks_container">
@@ -36,13 +38,13 @@
 									<h3>Suspendisse a pellentesque dui</h3>
 									<p>Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada .</p>
 								</div>
-							</li>	
+							</li>
 						</ul>
 			  		</div>
 				 </div>
 			</div>
 		</div>
-		<!-- banner -->	
+		<!-- banner -->
 		<!-- nam-matis -->
 		<div class="nam-matis">
 				<div class="nam-matis-top">
@@ -53,13 +55,13 @@
 							<p class="info"><%= post.fullname %> - <%= post.created_at.strftime("%d/%m/%Y") %> - Lượt xem: <%= post.view %></p>
 							<p><%= truncate(post.content, :length => 100) %>	</p>
 						</div>
+
 					<% end %>
 						<div class="clearfix"> </div>
 				</div>
 		</div>
-		<!-- nam-matis -->	
+		<!-- nam-matis -->
 	</div>
-	
 		<div class="fle-xsel">
 			<ul id="flexiselDemo3">
 				<li>
@@ -75,40 +77,38 @@
 							<img src="images/5.jpg" class="img-responsive" alt="">
 						</div>
 					</a>
-				</li>			
+				</li>
 				<li>
 					<a href="#">
 						<div class="banner-1">
 							<img src="images/1.jpg" class="img-responsive" alt="">
 						</div>
 					</a>
-				</li>		
+				</li>
 				<li>
 					<a href="#">
 						<div class="banner-1">
 							<img src="images/4.jpg" class="img-responsive" alt="">
 						</div>
 					</a>
-				</li>	
+				</li>
 				<li>
 					<a href="#">
 						<div class="banner-1">
 							<img src="images/6.jpg" class="img-responsive" alt="">
 						</div>
 					</a>
-				</li>	
+				</li>
 				<li>
 					<a href="#">
 						<div class="banner-1">
 							<img src="images/1.jpg" class="img-responsive" alt="">
 						</div>
 					</a>
-				</li>				
+				</li>
 			</ul>
-							
-					<div class="clearfix"> </div>
-		</div>
-		
+
+
 	</div>
 
 	<%= render "shared/footer" %>

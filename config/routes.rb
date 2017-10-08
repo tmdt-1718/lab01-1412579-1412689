@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get '/albums', to: 'home#albums'
+  get '/abouts', to: 'home#abouts'
+
   get '/', to: 'home#index', as: :home
 
   #Login route
@@ -13,4 +17,5 @@ Rails.application.routes.draw do
   resources :post, only: [:index, :new, :edit, :update, :create, :show] 
 
   #resources :user, only: [:new,:create], path: '/', path_names: { new: 'signup', create: 'signup'} 
+
 end
