@@ -11,6 +11,8 @@ Account test: tangliang/123456
 
 **Database được upload tại folder Database**
 
+**Đôi khi đăng nhập hoặc comment sẽ bị lỗi, vì sử dụng gmail nên lâu lâu Google nó sẽ chặn và bắt nhập captcha.**
+
 ## Yêu cầu
 
 Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm vào chức năng theo mẫu. Mục nào ko có MSSV là tính điểm theo nhóm. Cần sắp xếp các chức năng bên dưới theo thứ tự MSSV đã thực hiện.
