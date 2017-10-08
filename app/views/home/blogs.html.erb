@@ -18,7 +18,7 @@
 							<a href="javascript:"><img src="<%= post.thumbnail %>" class="img-responsive" alt=""></a>
 							<h3><%= link_to post.title, post_path(post.slug) %></h3>
 							<p class="info"><%= post.fullname %> - <%= post.created_at.strftime("%d/%m/%Y") %> - Lượt xem: <%= post.view %></p>
-							<p><%= truncate(post.content, :length => 100) %>	</p>
+							<p><%= truncate(post.content, :length => 20) %>	</p>
 						</div>
 
 					<% end %>
