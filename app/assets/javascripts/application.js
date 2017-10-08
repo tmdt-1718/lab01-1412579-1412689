@@ -15,4 +15,6 @@
 //= require editormd.min
 //= require bootstrap.min
 //= require popper.min
-//= require_tree .
+//= require jquery.flexisel
+//= require responsiveslides.min
+//= require toggleleftmenu
