@@ -12,4 +12,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require editormd.min
+//= require bootstrap.min
+//= require popper.min
 //= require_tree .
