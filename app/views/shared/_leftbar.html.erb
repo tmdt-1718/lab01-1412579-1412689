@@ -26,7 +26,7 @@
 <% @usernew.each do |us| %>
     <li> 
         <p>Thành viên mới:    <b><%=us.fullname%></b> </p>
-        <p>Thời gian đăng ký: <%= us.created_at.strftime("%d/%m/%Y") %></p>
+        <p>Thời gian đăng ký: <%= us.created_at.strftime("%H:%M %d/%m/%Y") %></p>
     </li>
 <%end%>
 </div>
