@@ -1,0 +1,53 @@
+
+
+<%= render "shared/header" %>
+<!-- registration -->
+<div class="container">
+	<div class="main-1">
+		
+			<div class="register">
+			<%= form_with scope: :user, local: true do |f|%>
+			
+					<div class="register-bottom-grid">
+						<h3>Đăng ký tài khoản</h3>
+						<div class="wow" data-wow-delay="0.4s">
+							<span>Tên đăng nhập<label>*</label></span>
+							<%= f.text_field :username%>
+						</div>
+						<div class="wow" data-wow-delay="0.4s">
+							<span>Họ và tên<label>*</label></span>
+							<%= f.text_field :fullname %>
+						</div>
+						<div class="wow" data-wow-delay="0.4s">
+						<span>Email<label>*</label></span>
+							<%= f.text_field :email %>
+						</div>
+							<div class="wow" data-wow-delay="0.4s">
+								<span>Password<label>*</label></span>
+								<%= f.password_field :password %>
+							</div>
+							<div class="wow" data-wow-delay="0.4s">
+								<span>Confirm Password<label>*</label></span>
+								<%= f.password_field :password_confirmation %>
+							</div>
+					</div>
+				<div class="clearfix"> </div>
+				<div class="register-but">
+						<button type="submit" class="btn btn-primary btn-lg btn-submit">Đăng ký</button>
+					   <div class="clearfix"> </div>
+				</div>
+				<% end %>
+				<% if @user.errors.any? %>
+				<div class="alert alert-danger">
+					
+						<% @user.errors.full_messages.each do |message| %>
+						<p><%= message %></p>
+						<% end %>
+				<% end %>
+				</div>
+           </div>
+           
+	</div>
+
+
+	<%= render "shared/footer" %>

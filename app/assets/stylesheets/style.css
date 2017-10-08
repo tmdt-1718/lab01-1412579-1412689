@@ -178,7 +178,7 @@ ul a:focus {
 	font-size: 1.8em;
 	text-align:left;
 	font-size: 1.5em;
-	font-family: 'Libre Baskerville', serif;
+	
 }
 .caption p {
 	color: #fff;
@@ -322,13 +322,17 @@ ul.callbacks_tabs.callbacks1_tabs {
 .nam-matis h3 a{
   text-decoration:none;
 }
+.nam-matis-1{
+  margin-bottom: 5px;
+  border: 1px solid #D8DADC;
+  padding-top: 5px;
+}
 .nam-matis h3{
   font-size: 1.3em;
   color:#26313b;
    margin: 1em 0 0;
     font-size: 1.4em;
   font-weight: 700;
-  font-family: 'Libre Baskerville', serif;
 }
 .nam-matis h3 a:hover{
   color: #76adff;
@@ -336,9 +340,8 @@ ul.callbacks_tabs.callbacks1_tabs {
 .nam-matis p {
   color: #302e2e;
   font-size: 1em;
-  line-height: 1.8em;
-  margin: 1em 0;
-  font-weight: 400;
+  padding: 0 1em 1em 0;
+  font-weight: 600;
 }
 .b-search{
 	position: relative;
@@ -386,7 +389,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   margin: 0 0 .5em 0;
   font-weight: 700;
   text-decoration: none;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .blog-grid-right h4 a:hover{
   color: #76adff;
@@ -428,7 +431,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   margin: 1.5em 0 0;
   font-size: 1.3em;
   border-radius: 5px;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .blo-top form input[type="text"] {
   width: 100%;
@@ -545,7 +548,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   font-size: 1.3em;
   margin: 0 0 1em;
   font-weight: 700;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .footer li a {
   color: #302e2e;
@@ -599,7 +602,7 @@ ul.span_2 li.span_2-right h3 {
   color: #26313b;
   font-size: 1.5em;
   font-weight: 700;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 ul.span_2 li.span_2-right h4 {
   color: #76adff;
@@ -626,7 +629,7 @@ h3.m_1 {
   font-weight: 400;
   margin: 0 0 1em;
   font-size: 2em;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .testimonial{
 	padding:2em 0;
@@ -637,7 +640,7 @@ h3.m_1 {
   color: #26313b;
   font-weight: 400;
   font-size: 2em;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .testimonial p {
   color: #302e2e;
@@ -670,7 +673,7 @@ ul.test_icon li a:hover{
   font-size: 1.5em;
   font-weight: 700;
   margin: 0;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .about-top p {
   color: #302e2e;
@@ -685,7 +688,7 @@ ul.test_icon li a:hover{
   font-weight: 400;
   margin: 0 0 1em;
   text-align: center;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 /*-- services --*/
 .services{
@@ -749,7 +752,7 @@ i.icon6{
   font-size: 1.5em;
   font-weight: 700;
   margin: 1em 0 0 0;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .service-top p {
   color: #302e2e;
@@ -821,7 +824,7 @@ h3.m_3 {
 	font-weight:700;
 	text-decoration: none;
 	text-transform:captalized;
-	font-family: 'Libre Baskerville', serif;
+	
 }
 .blog-artical-info-head h2 a:hover{
 		color:#006AFF;
@@ -1005,7 +1008,7 @@ i.adm1{
   color: #26313b;
   margin: 0;
   padding: 0;
-  font-family: 'Libre Baskerville', serif;
+  
   font-weight: 700;
 }
 .twitter-weights{
@@ -1032,7 +1035,7 @@ i.adm1{
   color: #26313b;
   margin: 0.5em 0;
   font-weight: 700;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .b-tag-weight ul li{
 	display:inline-block;
@@ -1171,7 +1174,7 @@ i.adm1{
   font-weight: 600;
   margin: 0 0 0.5em;
   text-align: left;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .contact_left p{
 	font-size: 1em;
@@ -1186,7 +1189,7 @@ i.adm1{
   margin: 0 0 1em;
   padding-bottom: 15px;
   text-align: center;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .company_ad h3 {
   font-size: 1.7em;
@@ -1194,7 +1197,7 @@ i.adm1{
   font-weight: 600;
   margin: 0 0 0.5em;
   text-align: left;
-  font-family: 'Libre Baskerville', serif;
+  
 }
 .company_ad span {
   font-size: 1em;
@@ -1283,14 +1286,14 @@ a.reply:hover{
 }
 .strator-right {
   float: right;
-  width: 88%;
+  width: 100%;
 }
 .strator-left {
   float: left;
   width: 11%;
 }
 .strator {
-  padding: 2em 2em;
+  padding: 1em 1em;
   background: rgba(0, 0, 0, 0.09);
 }
 .strator1 {
@@ -1352,7 +1355,7 @@ a.reply:hover{
   font-weight: 700;
   font-size: 1.5em;
   margin-bottom: 1em;
-   font-family: 'Libre Baskerville', serif;
+   
 }
 .respon h5 {
   color: #fff;
@@ -1501,7 +1504,7 @@ a.b-home:hover{
 	font-size: 1.4em;
 	padding-bottom: 0.5em;
 	font-weight:700;
-	font-family: 'Libre Baskerville', serif;
+	
 }
 .login-left p, .login-right p {
 	color: #302e2e;
@@ -1577,15 +1580,14 @@ a.b-home:hover{
 	color:#26313b;
 	font-size: 1.4em;
 	padding-bottom: 15px;
-	margin: 0;
 	font-weight: 700;
-	font-family: 'Libre Baskerville', serif;
+	text-align: center;
 }
 .register-top-grid div, .register-bottom-grid div {
-	width: 48%;
-	float: left;
-	margin: 10px 0;
+	width: 50%;
+	margin: 0 auto;
 }
+
 .register-top-grid span, .register-bottom-grid span {
 	color:#999;
 	font-size: 0.85em;
@@ -2185,7 +2187,8 @@ h3.m_3 {
 .register-top-grid div, .register-bottom-grid div {
   width: 100%;
   float: none;
-  margin: 10px 0;
+  display: block;
+  margin: 0 auto;
 }
 div.register-bottom-grid {
   margin-top: 5em;
@@ -2434,6 +2437,7 @@ a.b-home {
 .left{
   float: left;
 }
+
 /*about*/
 @media (min-width: 992px){
 	.col-md-3{
@@ -3006,3 +3010,36 @@ a.view-all{
 	text-transform: uppercase;
 	display: block;
 }
+
+
+.btn-submit{
+  display: block;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  top: 0;
+  display: block;
+  width: 100%;
+}
+
+.bg{
+  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 21px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+.thread-cover-container{
+  margin-top: -15px;
+  margin-bottom: 0;
+  position: relative;
+  text-align: left;
+}
+
