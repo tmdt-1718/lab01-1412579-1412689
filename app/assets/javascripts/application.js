@@ -12,4 +12,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+//= require editormd.min
+//= require bootstrap.min
+//= require popper.min
+//= require jquery.flexisel
+//= require responsiveslides.min
+//= require toggleleftmenu
