@@ -1,10 +1,13 @@
 class PostController < ApplicationController
     before_action :isLogin, only: [:new,:index]
     before_action :getPosts, only: [:index]
+    before_action :showPost, only: [:show]
+    before_action :getPostView, only: [:index,:show]
+    before_action :getUserNew, only: [:index,:show]
     def index
     end
     def show
-        showPost
+        
     end
     def new
         @post = Post.new

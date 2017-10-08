@@ -19,6 +19,12 @@ class ApplicationController < ActionController::Base
   def getPostIndex
     @posts = Post.joins(:user).order(created_at: :desc).select("posts.*","users.fullname")
   end
+  def getPostView
+    @viewpost = Post.joins(:user).order(view: :desc).select("posts.*","users.fullname").limit(3)
+  end
+  def getUserNew
+    @usernew = User.order(created_at: :desc).limit(6)
+  end
   def getPosts
     @posts = Post.joins(:user).where(users: { id:  session[:current_user]["id"]}).select("posts.*","users.fullname")
   end

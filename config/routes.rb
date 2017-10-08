@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  get '/albums', to: 'home#albums'
-  get '/abouts', to: 'home#abouts'
+  
 
   get '/', to: 'home#index', as: :home
-
+  get '/albums', to: 'home#albums'
+  get '/abouts', to: 'home#abouts'
+  get '/images', to: 'home#images'
+  get '/blogs', to: 'home#blogs'
   #Login route
   get '/login', to: 'sessions#new', as: :login
   post '/login', to: 'sessions#create', as: nil
