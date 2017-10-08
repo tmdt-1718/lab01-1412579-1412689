@@ -15,8 +15,11 @@ Rails.application.routes.draw do
   
   get '/signup', to: 'user#new', as: :signup
   post '/signup', to: 'user#create', as: nil
+  post "/comment/:id", to: "comment#create", as: :comment_post
   #, :path_names => {:new => 'new' }
-  resources :post, only: [:index, :new, :edit, :update, :create, :show] 
+  resources :post, only: [:index, :new, :edit, :update, :create, :show] do
+    
+  end
 
   #resources :user, only: [:new,:create], path: '/', path_names: { new: 'signup', create: 'signup'} 
 

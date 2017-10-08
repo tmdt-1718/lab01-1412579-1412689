@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
         #p user.password_digest
         if user && BCrypt::Password.new(user.password_digest) == session_params[:password]
             login(user)
+            UserMailer.login(user.id).deliver
             redirect_to :home
         else
             flash[:error] = "Tên đăng nhập hoặc mật khẩu không chính xác!"

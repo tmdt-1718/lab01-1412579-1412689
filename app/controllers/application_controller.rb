@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
     @usernew = User.order(created_at: :desc).limit(6)
   end
   def getPosts
-    @posts = Post.joins(:user).where(users: { id:  session[:current_user]["id"]}).select("posts.*","users.fullname")
+    @posts = Post.joins(:user).where(users: { id:  session[:current_user]["id"]}).order(created_at: :desc).select("posts.*","users.fullname")
   end
   def getPost
     @post = Post.find(params[:id])
