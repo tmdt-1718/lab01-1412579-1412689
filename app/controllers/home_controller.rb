@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     before_action :getPostView, only: [:index,:blogs]
     before_action :getUserNew, only: [:index,:blogs]
     def index
-
+        
     end
     def abouts
 

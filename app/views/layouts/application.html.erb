@@ -15,7 +15,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/1.0.0/css/dataTables.responsive.css">
   <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
   <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 
 
@@ -45,7 +45,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             // Animation complete.
             });
           });
+         
+          
       </script>
+      <% if @home %>
+      <script>
+        var read;
+          $(function() {
+             read = editormd("read", {
+                 readOnly: true,
+                 width   : "100%",
+                 height  : 640,
+                 syncScrolling : "single",
+                 path    : "../lib/"
+             });
+             
+         });
+      </script>
+      <%else%>
+      <script>
+      var compose;
+      $(function() {
+          compose = editormd("compose", {
+              width   : "100%",
+              height  : 500,
+              syncScrolling : "single",
+              path    : "/lib/"
+          });
+      });
+    </script>
+      <%end%>
 </body>
 
 </html>

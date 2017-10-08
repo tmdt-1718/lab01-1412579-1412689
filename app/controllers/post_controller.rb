@@ -7,6 +7,7 @@ class PostController < ApplicationController
     def index
     end
     def show
+        @home = 1
         
     end
     def new
@@ -22,7 +23,7 @@ class PostController < ApplicationController
         end
     end
     def edit
-        editPost
+        @post = Post.find(params[:id])
     end
     def update
         puts params
@@ -42,11 +43,14 @@ class PostController < ApplicationController
 		params.require(:post).permit(:title,:content,:thumbnail)
     end
     def showPost
-
+        
         @post = Post.friendly.find(params[:id])
+        
         if @post
             @user = User.find(@post.user_id)
             @post.increment!(:view)
+            @comments = Comment.joins(:user).where(comments: { user_id:  session[:current_user]["id"]}, comments: { post_id:  @post.id}).select("comments.*","users.fullname")
+            puts @comments
         end
     end
 end

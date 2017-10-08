@@ -7,7 +7,15 @@
                     <li class="breadcrumb-item"><a href="/post/new">Tạo bài viết mới</a></li>
                 </ol>
                 <h2>Tạo bài viết mới</h2>
+                <% if @post.errors.any? %>
+                <div class="alert alert-danger">
+                    
+                        <% @post.errors.full_messages.each do |message| %>
+                        <p><%= message %></p>
+                        <% end %>
+                <% end %>
                  <%= form_with scope: :post,url: post_index_path do |f| %>
+                    
                     <fieldset>
                         <div class="form-group">
                             <label>Title</label>
@@ -25,21 +33,17 @@
                         <div class="form-group">
                             <label>Content</label>
                             <br>
-                            <%= f.text_area :content, class: "form-control" %>
+                            <div id="compose">
+                            <%= f.text_area :content, style: "display: none;"%>
                                 <div id="content-alert"></div>
+                            </div>
                         </div>
 
                         <!-- Change this to a button or input when using this as a form -->
                         <input type="submit" class="btn btn-primary" id="post" name="btnLogin" value="Submit">
                     </fieldset>
                     <%end%>
-                    <% if @post.errors.any? %>
-                    <div class="alert alert-danger">
-                        
-                            <% @post.errors.full_messages.each do |message| %>
-                            <p><%= message %></p>
-                            <% end %>
-                    <% end %>
+                    
             </div>
             
     </div>

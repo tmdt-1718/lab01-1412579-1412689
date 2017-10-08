@@ -49,7 +49,7 @@ Liệt kê các **yêu cầu nâng cao** đã thực hiện:
 * [x] Cho phép người dùng layout bài viết bằng markdown. (**1412579**)
 * [x] Gửi mail cho người dùng khi người dùng đã đăng nhập thành công. (**1412579**)
 * [x] Gửi mail cho tác giả khi có người dùng comment vào bài viết của họ. (**1412579**)
-
+* [x] Tăng view mỗi lần reload tin. (**1412579**)
 ## Demo
 
 Link Youtube Demo ứng dụng:

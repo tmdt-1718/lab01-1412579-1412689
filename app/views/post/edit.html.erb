@@ -30,8 +30,10 @@
                     <div class="form-group">
                         <label>Content</label>
                         <br>
-                        <%= f.text_area :content, class: "form-control" ,value: @post.title%>
+                        <div id="compose">
+                        <%= f.text_area :content, style: "display: none;", value: @post.content%>
                             <div id="content-alert"></div>
+                        </div>
                     </div>
 
                     <!-- Change this to a button or input when using this as a form -->

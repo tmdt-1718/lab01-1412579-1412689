@@ -17,8 +17,8 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: 1  
+  username: <%= Figaro.env.username %>
+  password: <%= Figaro.env.password %>
   host: localhost
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
@@ -83,6 +83,5 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>
-  username: <%= ENV['USERNAME'] %>
-  password: <%= ENV['PASSWORD'] %>
+  username: <%= Figaro.env.username %>
+  password: <%= Figaro.env.password %>

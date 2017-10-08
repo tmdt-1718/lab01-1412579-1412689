@@ -1303,7 +1303,6 @@ a.reply:hover{
 }
 .comment input[type="text"] {
   display: block;
-  width: 31.33%;
   padding: 12px;
   outline: none;
   font-size: 1em;

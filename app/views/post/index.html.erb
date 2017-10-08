@@ -34,7 +34,7 @@
                             <td><img src="<%= post.thumbnail %>" width="50px" height="auto" class="img-responsive" alt=""></td>
                             <td><%= post.fullname %>  </td>
                             <td><%= post.view %></td>
-                            <td><%= post.created_at.strftime("%d/%m/%Y") %></td>
+                            <td><%= post.created_at.strftime("%d/%m/%Y %H:%M") %></td>
                             <td><%= link_to "Sửa bài viết", edit_post_path(post.id) %></td>
                         </tr>
                         <% end %>
