@@ -74,7 +74,7 @@ Rails.application.configure do
   config.active_support.deprecation = :notify
   config.serve_static_assets = false
   config.assets.compress = true
-  config.assets.js_compressor = :uglifier
+  #config.assets.js_compressor = :uglifier
   config.assets.digest = true
   config.assets.compile = true  
   # Use default logging formatter so that PID and timestamp are not suppressed.
