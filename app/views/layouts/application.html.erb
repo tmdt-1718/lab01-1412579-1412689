@@ -13,7 +13,6 @@
   <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" />
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 
 </head>
@@ -24,9 +23,7 @@
       <script type="text/javascript" language="javascript" src="//cdn.datatables.net/responsive/1.0.0/js/dataTables.responsive.min.js"></script>
       <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
       <script>
-        $(document).ready('turbolinks:load',function () {
-          alert("Test");
-          $('#myTable').DataTable();
+        $(function () {
           $("#slider").responsiveSlides({
             auto: true,
             nav: true,
@@ -35,10 +32,13 @@
             pager: true,
           });
         });
+        $(document).ready(function () {
+          $('#myTable').DataTable();
+        });
       </script>
       <% if @home %>
       <script>
-      $(document).ready('turbolinks:load',function(e){
+      $(function () {
         
         var read;
         read = editormd("read", {
@@ -52,7 +52,7 @@
       </script>
       <%else%>
       <script>
-        $(document).ready('turbolinks:load',function(e){
+      $(function () {
           var compose;
           compose = editormd("compose", {
               width   : "100%",
