@@ -21,7 +21,7 @@
 		  						 	<ul>
 		  						 		<li><small> </small><span><%= @post.created_at.strftime("%d/%m/%Y %H:%M") %></span></li>
 		  						 		<li><a href="#"><small class="admin"> </small><span><%= @user.fullname %> </span></a></li>
-		  						 		<li><a href="#"><small class="no"> </small><span>0 bình luận</span></a></li>
+		  						 		<li><a href="#"><small class="no"> </small><span><%= @comments.length %> bình luận</span></a></li>
 		  						 		<li><a href="#"><small class="link"> </small><span>Lượt xem: <%= @post.view %> </span></a></li>
 		  						 	</ul>
 		  						 </div>
