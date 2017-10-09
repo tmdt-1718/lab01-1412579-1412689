@@ -38,7 +38,7 @@
       </script>
       <% if @home %>
       <script>
-      $(document).ready('ready page:load',function(e){
+      $(document).ready('turbolinks:load',function(e){
         
         var read;
         read = editormd("read", {
@@ -52,7 +52,7 @@
       </script>
       <%else%>
       <script>
-        $(document).ready('ready page:load',function(e){
+        $(document).ready('turbolinks:load',function(e){
           var compose;
           compose = editormd("compose", {
               width   : "100%",
