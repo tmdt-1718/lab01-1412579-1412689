@@ -24,7 +24,8 @@
       <script type="text/javascript" language="javascript" src="//cdn.datatables.net/responsive/1.0.0/js/dataTables.responsive.min.js"></script>
       <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
       <script>
-        $(function () {
+        $(document).ready('turbolinks:load',function () {
+          $('#myTable').DataTable();
           $("#slider").responsiveSlides({
             auto: true,
             nav: true,
@@ -32,9 +33,6 @@
             namespace: "callbacks",
             pager: true,
           });
-        });
-        $(document).ready(function () {
-          $('#myTable').DataTable();
         });
         $( "span.menu" ).click(function() {
             $( ".head-nav ul" ).slideToggle(300, function() {
@@ -46,7 +44,7 @@
       </script>
       <% if @home %>
       <script>
-      $(document).ready(function(e){
+      $(document).ready('turbolinks:load',function(e){
         var read;
         read = editormd("read", {
             readOnly: true,
@@ -61,7 +59,7 @@
       </script>
       <%else%>
       <script>
-        $(document).ready(function(e){
+        $(document).ready('turbolinks:load',function(e){
           var compose;
       $(function() {
           compose = editormd("compose", {
