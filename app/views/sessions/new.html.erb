@@ -10,6 +10,11 @@
                         <%end%>
                 </div>
                 <div class="col-md-6 login-right wow fadeInRight" data-wow-delay="0.4s">
+                <% if flash[:success] %>
+                <div class="alert alert-success">
+                    <%= flash[:success] %>
+                </div>
+                <% end %>
                     <h3>ĐĂNG NHẬP</h3>
                     <p>Đăng nhập để bắt đầu chia sẻ câu chuyện của mình.</p>
                     <%= form_with scope: :session, local: true do |f|%>

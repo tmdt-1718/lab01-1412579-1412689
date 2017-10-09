@@ -10,6 +10,7 @@ class UserController < ApplicationController
         else
             @user = User.new(session_params);
             if @user.save
+                flash[:success] = "Tài khoản #{@user.username} đã đăng ký thành công!"
                 redirect_to login_path
             else
                 render :action => :new
