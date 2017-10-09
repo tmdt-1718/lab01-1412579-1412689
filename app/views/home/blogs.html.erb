@@ -15,7 +15,7 @@
 				<div class="nam-matis-top">
 					<% @posts.each do |post| %>
 						<div class="col-md-6 nam-matis-1">
-							<a href="javascript:"><img src="<%= post.thumbnail %>" class="img-responsive" alt=""></a>
+							<a href="/post/<%=post.slug%>"><img src="<%= post.thumbnail %>" class="img-responsive" alt=""></a>
 							<h3><%= link_to post.title, post_path(post.slug) %></h3>
 							<p class="info"><%= post.fullname %> - <%= post.created_at.strftime("%d/%m/%Y") %> - Lượt xem: <%= post.view %></p>
 							<p><%= truncate(post.content, :length => 20) %>	</p>
