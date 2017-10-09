@@ -12,7 +12,5 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require rails-ujs
-//= require popper.min
-
 //= require turbolinks
-//= require_tree .
+//= require toggleleftmenu
