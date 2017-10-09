@@ -44,7 +44,8 @@
       </script>
       <% if @home %>
       <script>
-      $(document).ready('turbolinks:load',function(e){
+      $(document).ready('ready page:load',function(e){
+        alert("Test");
         var read;
         read = editormd("read", {
             readOnly: true,
@@ -54,21 +55,17 @@
             path    : "../lib/"
         });
       });
-              
-            
       </script>
       <%else%>
       <script>
-        $(document).ready('turbolinks:load',function(e){
+        $(document).ready('ready page:load',function(e){
           var compose;
-      $(function() {
           compose = editormd("compose", {
               width   : "100%",
               height  : 500,
               syncScrolling : "single",
               path    : "/lib/"
           });
-      });
       });
       
     </script>
