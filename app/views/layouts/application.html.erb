@@ -25,6 +25,7 @@
       <script src="//cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
       <script>
         $(document).ready('turbolinks:load',function () {
+          alert("Test");
           $('#myTable').DataTable();
           $("#slider").responsiveSlides({
             auto: true,
@@ -34,18 +35,11 @@
             pager: true,
           });
         });
-        $( "span.menu" ).click(function() {
-            $( ".head-nav ul" ).slideToggle(300, function() {
-            // Animation complete.
-            });
-          });
-         
-          
       </script>
       <% if @home %>
       <script>
       $(document).ready('ready page:load',function(e){
-        alert("Test");
+        
         var read;
         read = editormd("read", {
             readOnly: true,
