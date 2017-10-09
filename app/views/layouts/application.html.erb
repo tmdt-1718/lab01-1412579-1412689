@@ -31,39 +31,30 @@
             namespace: "callbacks",
             pager: true,
           });
-        });
-        $(document).ready(function () {
           $('#myTable').DataTable();
-        });
-      </script>
-      <% if @home %>
-      <script>
-      $(function () {
+          <% if @home %>
+            var read;
+            read = editormd("read", {
+                readOnly: true,
+                width   : "100%",
+                height  : 640,
+                syncScrolling : "single",
+                path    : "../lib/"
+            });
+            <%else%>
         
-        var read;
-        read = editormd("read", {
-            readOnly: true,
-            width   : "100%",
-            height  : 640,
-            syncScrolling : "single",
-            path    : "../lib/"
+                var compose;
+                compose = editormd("compose", {
+                    width   : "100%",
+                    height  : 500,
+                    syncScrolling : "single",
+                    path    : "/lib/"
+                });
+            <%end%>
         });
-      });
       </script>
-      <%else%>
-      <script>
-      $(function () {
-          var compose;
-          compose = editormd("compose", {
-              width   : "100%",
-              height  : 500,
-              syncScrolling : "single",
-              path    : "/lib/"
-          });
-      });
       
-    </script>
-      <%end%>
+      
 </body>
 
 </html>
