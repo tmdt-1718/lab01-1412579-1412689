@@ -59,9 +59,13 @@
                 });
             <%end%>
             console.log("Js loaded");
+            $( "span.menu" ).click(function() {
+              $( ".head-nav ul" ).slideToggle(300, function() {
+              // Animation complete.
+              });
+            });
         });
       </script>
-      
       
 </body>
 
