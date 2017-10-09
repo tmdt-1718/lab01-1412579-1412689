@@ -9,12 +9,8 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
+//= require rails-ujs
 //= require turbolinks
-//= require editormd.min
-//= require bootstrap.min
-//= require popper.min
-//= require jquery.flexisel
-//= require responsiveslides.min
 //= require toggleleftmenu
